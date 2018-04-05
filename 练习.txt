@@ -1,0 +1,89 @@
+#include<stdio.h>
+int main()
+{
+	int x,cnt;
+	int i,j;
+	int k;
+
+	while(scanf("%d%d",&x,&cnt)!=EOF)
+	
+	{
+	     i=0;
+		for(j=x+1;i<cnt;j++)
+		{
+			for(k=2;k<j;k++)
+			{
+				if(j%k==0)
+				break;
+			}
+			if(k==j)
+			{
+				if(i!=cnt-1)
+				{
+				printf("%d ",j);
+				i++;
+				}
+				else 
+				{
+					printf("%d\n",j);
+					i++;
+				}
+			}
+			
+		}	
+	}
+}
+#include<stdio.h>
+int main()
+{
+	double x;
+	int y;
+	int i;
+	scanf("%lf%d",&x,&y);
+	double t=x;
+	for(i=1;i<y;i++)
+	{
+		x=t*x;
+	}
+ 	printf("%.3lf",x);
+}
+#include<stdio.h>
+int main()
+{
+	int x;
+	scanf("%d",&x);
+	int t;
+	int sta=0;
+	for(t=x;t>1;t--)
+	{
+		if(x%t==0&&t%2==0)
+		{
+			printf("%d\n",t);
+			sta=1;
+		}
+	}
+	if(sta==0)
+	{
+	
+		if(t=1||x==1)
+		printf("No");
+	}
+}
+#include<stdio.h>
+int main()
+{
+	int x;
+	long i;
+	scanf("%d",&x);
+	while(x>0)
+	{
+		scanf("%ld",&i);
+		while(i>0)
+		{
+			printf("%d",i%10);
+			i/=10;
+		}
+		x--;
+		printf("\n");
+	}
+}
